@@ -14,22 +14,30 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
-# Définition des chemins
-path = '/Users/olivierdebeyssac/Python_project_predictive_maintenance/pm_git/pm_api/'
+# Définition des chemins en local
+#path = '/Users/olivierdebeyssac/Python_project_predictive_maintenance/pm_git/pm_api/'
 f_model_name = 'best_model.pkl'
-model_path = path + f_model_name
+#model_path = path + f_model_name
 
 f_df_name = 'df.pkl'
-df_path = path + f_df_name
+# df_path = path + f_df_name
 
 f_df_total_name = 'df_total.pkl'
-df_total_path = path + f_df_total_name
+# df_total_path = path + f_df_total_name
 
 f_X_total_name = 'X_total.pkl'
-X_total_path = path + f_X_total_name
+# X_total_path = path + f_X_total_name
 
 f_y_total_name = 'y_total.pkl'
-y_total_path = path + f_y_total_name
+# y_total_path = path + f_y_total_name
+
+# Définition des chemins sur git
+model_path = f_model_name
+df_path = f_df_name
+df_total_path = f_df_total_name
+X_total_path = f_X_total_name
+y_total_path = f_y_total_name
+
 
 
 # Chargement des data
