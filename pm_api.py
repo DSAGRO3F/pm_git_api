@@ -22,13 +22,20 @@ app.config["DEBUG"] = True
 #2. Chemin sur git
 path = 'https://predictive-maintenance-api-6ea7f441053d.herokuapp.com'
 
-# Chemin model
+# Chemin model en local
 f_model_name = 'best_model.pkl'
 model_path = path + f_model_name
 
-# Chemin data
+# Chemin model sur git
+model_path = f_model_name
+
+
+# Chemin data en local
 f_df_name = 'df.pkl'
 df_path = path + f_df_name
+
+# Chemin data sur git
+df_path = f_df_name
 
 # f_df_total_name = 'df_total.pkl'
 # df_total_path = path + f_df_total_name
