@@ -19,25 +19,20 @@ app.config["DEBUG"] = True
 #1. Chemin en local:
 # path = '/Users/olivierdebeyssac/Python_project_predictive_maintenance/pm_git/pm_api/'
 
-#2. Chemin sur git
-path = '/'
-
-
-
 # Chemin model en local
-f_model_name = 'best_model.pkl'
+# f_model_name = 'best_model.pkl'
 # model_path = path + f_model_name
 
 # Chemin model sur git
-model_path = path + f_model_name
+model_path = '/best_model.pkl'
 
 
 # Chemin data en local
-f_df_name = 'df.pkl'
+# f_df_name = 'df.pkl'
 # df_path = path + f_df_name
 
 # Chemin data sur git
-df_path = path + f_df_name
+df_path = '/df.pkl'
 
 
 # f_df_total_name = 'df_total.pkl'
