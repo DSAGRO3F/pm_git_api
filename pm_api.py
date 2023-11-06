@@ -14,51 +14,51 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
-# Définition des chemins en local
-#path = '/Users/olivierdebeyssac/Python_project_predictive_maintenance/pm_git/pm_api/'
+# Définition des chemins
+
+#1. Chemin en local:
+# path = '/Users/olivierdebeyssac/Python_project_predictive_maintenance/pm_git/pm_api/'
+
+#2. Chemin sur git
+path = 'https://predictive-maintenance-api-6ea7f441053d.herokuapp.com'
+
+# Chemin model
 f_model_name = 'best_model.pkl'
-#model_path = path + f_model_name
+model_path = path + f_model_name
 
+# Chemin data
 f_df_name = 'df.pkl'
-# df_path = path + f_df_name
+df_path = path + f_df_name
 
-f_df_total_name = 'df_total.pkl'
+# f_df_total_name = 'df_total.pkl'
 # df_total_path = path + f_df_total_name
-
-f_X_total_name = 'X_total.pkl'
+#
+# f_X_total_name = 'X_total.pkl'
 # X_total_path = path + f_X_total_name
-
-f_y_total_name = 'y_total.pkl'
+#
+# f_y_total_name = 'y_total.pkl'
 # y_total_path = path + f_y_total_name
-
-# Définition des chemins sur git
-model_path = f_model_name
-df_path = f_df_name
-df_total_path = f_df_total_name
-X_total_path = f_X_total_name
-y_total_path = f_y_total_name
-
 
 
 # Chargement des data
 df_open = open(df_path, 'rb')
 df = pickle.load(df_open)
-#df = df[0:730]
+df = df[0:730]
 
-df_total_open = open(df_total_path, 'rb')
-df_total = pickle.load(df_total_open)
-
-X_total_open = open(X_total_path, 'rb')
-X_total = pickle.load(X_total_open)
-
-y_total_open = open(y_total_path, 'rb')
-y_total = pickle.load(y_total_open)
+# df_total_open = open(df_total_path, 'rb')
+# df_total = pickle.load(df_total_open)
+#
+# X_total_open = open(X_total_path, 'rb')
+# X_total = pickle.load(X_total_open)
+#
+# y_total_open = open(y_total_path, 'rb')
+# y_total = pickle.load(y_total_open)
 
 # Construction fonction pour obtention dataframe df par app. dashbord
 @app.route('/df', methods=['GET'])
 def get_df():
-       # print('df: {}'.format(df[0:2]))
-       # print(df.columns)
+       print('df: {}'.format(df[0:2]))
+       print(df.columns)
        d_df = df.to_dict()
        jsonified = jsonify(d_df)
        # print(type(jsonified))
