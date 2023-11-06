@@ -24,7 +24,7 @@ app.config["DEBUG"] = True
 # model_path = path + f_model_name
 
 # Chemin model sur git
-model_path = '/best_model.pkl'
+model_path = 'best_model.pkl'
 
 
 # Chemin data en local
@@ -32,7 +32,7 @@ model_path = '/best_model.pkl'
 # df_path = path + f_df_name
 
 # Chemin data sur git
-df_path = '/df.pkl'
+df_path = 'df.pkl'
 
 
 # f_df_total_name = 'df_total.pkl'
